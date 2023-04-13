@@ -6,6 +6,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 
+
 // 2nd CREATE THE CLASS - will always have a render method
 
 
