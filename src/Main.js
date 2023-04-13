@@ -1,5 +1,4 @@
 import React from 'react';
-import Person from './Person';
 import HornedBeast from './HornedBeast';
 import data from './data.json';
 import './Main.css';
@@ -17,7 +16,9 @@ class Main extends React.Component {
                         imageTitle={beast.title}
                         description={beast.description}
                         onSelectBeast={this.props.onSelectBeast}
+                
                     />
+                    
                 ))}
             </main>
         );

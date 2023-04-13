@@ -3,12 +3,14 @@ import './HornedBeast.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Component } from "react";
+import SelectedBeast from './SelectedBeast'
 
 
 export default class Hornedbeast extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			isModalShowing: false,
 			clicks: 0,
 			showInfo: false
 		}
@@ -42,8 +44,10 @@ export default class Hornedbeast extends Component {
 	}
 
 
+
 	render() {
 		return (
+			<>
 			<Card style={{ width: '20rem'}}>
 				<Card.Img variant="top" src={this.props.imageSrc} />
 				<Card.Body>
@@ -55,7 +59,7 @@ export default class Hornedbeast extends Component {
 							<p>{this.props.description}</p>
 						</article>
 					</Card.Text>
-					<Button onClick={this.needsInfo} variant="info">Get Info</Button>
+					<Button onClick={this.props.showModal} variant="info">Get Info</Button>
 					<Button onClick={this.gotInfo} variant="secondary">Remove Info</Button>
 
 					<div className={this.state.showInfo ? 'Show-Info' : ''}>
@@ -63,6 +67,8 @@ export default class Hornedbeast extends Component {
 					</div>
 				</Card.Body>
 			</Card>
+			<SelectedBeast />
+			</>
 		);
 	}
 }
