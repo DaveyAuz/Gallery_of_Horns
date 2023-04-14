@@ -54,7 +54,7 @@ export default class Hornedbeast extends Component {
 					<Card.Title>{this.props.title}</Card.Title>
 					<Card.Text>
 						<article>
-							<p>LIKES {this.state.clicks} 👍</p>
+							<p>👍LIKES {this.state.clicks} 💖🦄</p>
 							<Button onClick={this.handleClicks} variant="link">Like</Button>
 							<p>{this.props.description}</p>
 						</article>
