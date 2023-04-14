@@ -20,6 +20,7 @@ class App extends React.Component {
     this.state = {
       selectedBeast: null,
       filterHorns: 0,
+      filteredBeasts: data
     }
   }
 
@@ -32,17 +33,17 @@ class App extends React.Component {
   }
 
   handleFilterChange = (filterHorns) => {
-    this.setState({ filterHorns });
+    console.log(filterHorns);
+    this.setState({ filteredBeasts:filterHorns });
   }
 
   render (){
-    const filteredBeasts = this.state.filterHorns === 0 ? data : data.filter(beast => beast.horns === this.state.filterHorns);
-
+console.log(this.state);
     return(
     <>
       <Header />
       <FilterForm onFilterChange={this.handleFilterChange} />
-      <Main beasts={filteredBeasts} onSelectBeast={this.handleSelectedBeast} />
+      <Main beasts={this.state.filteredBeasts} onSelectBeast={this.handleSelectedBeast} />
       <SelectedBeast beast={this.state.selectedBeast} onHide={this.closeSelectedBeast} />
       <Footer />
     </>

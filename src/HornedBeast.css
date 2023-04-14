@@ -1,5 +1,5 @@
 article {
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid rgba(191, 0, 255, 0.919);
     padding: 1vw;
     margin-bottom: 1vw;
     /* width: 16%; */
@@ -18,7 +18,7 @@ article {
     cursor: pointer;
   }
   article p:last-of-type:hover {
-    color: rgb(209, 255, 5);
+    color: rgb(126, 5, 255);
   }
   .article-button {
     margin: .2rem .1vw;
