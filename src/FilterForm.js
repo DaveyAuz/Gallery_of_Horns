@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroup, Form, Button } from 'react-bootstrap';
+import { ListGroup, Form, } from 'react-bootstrap';
 import data from './data.json';
 
 // New class to render and give options to filter horns
@@ -34,10 +34,6 @@ class FilterForm extends React.Component {
     }
 
     render() {
-        const { data } = this.props;
-        
-
-
         return (
             <>
                 <ListGroup>
